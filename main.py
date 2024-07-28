@@ -38,7 +38,7 @@ app.add_middleware(
     allow_headers=['*'],
 )
 app.add_middleware(TrustedHostMiddleware, allowed_hosts=['*'])
-# app.add_middleware(HTTPSRedirectMiddleware)
+app.add_middleware(HTTPSRedirectMiddleware)
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 app.add_middleware(LoggingMiddleware)
 app.add_middleware(CSRFProtectMiddleware, csrf_secret=os.getenv('CSRF_SECRET_KEY'))
