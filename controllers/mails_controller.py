@@ -124,7 +124,7 @@ class MailsController():
         }
         try:
             async with httpx.AsyncClient() as client:
-                response = await client.post('http://127.0.0.1:8000/mail/send-email', json=email_payload)
+                response = await client.post('https://travelyst.onrender.com/mail/send-email', json=email_payload)
                 response.raise_for_status()
                 response_json = response.json()
                 if response_json['status'] == status.HTTP_200_OK:
@@ -204,7 +204,7 @@ class MailsController():
         }
         try:
             async with httpx.AsyncClient() as client:
-                response = await client.post('http://127.0.0.1:8000/mail/send-email', json=email_payload)
+                response = await client.post('https://travelyst.onrender.com/mail/send-email', json=email_payload)
                 response.raise_for_status()
                 response_json = response.json()
                 if response_json['status'] == status.HTTP_200_OK:
@@ -277,7 +277,7 @@ class MailsController():
         }
         try:
             async with httpx.AsyncClient() as client:
-                response = await client.post('http://127.0.0.1:8000/mail/send-email', json=email_payload)
+                response = await client.post('https://travelyst.onrender.com/mail/send-email', json=email_payload)
                 response.raise_for_status()
                 response_json = response.json()
                 if response_json['status'] == status.HTTP_200_OK:

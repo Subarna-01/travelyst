@@ -2,6 +2,5 @@
 .env
 
 # Ignore other files and directories
-*.log
 *.pyc
 __pycache__/
