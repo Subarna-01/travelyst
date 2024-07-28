@@ -3,4 +3,5 @@
 
 # Ignore other files and directories
 *.pyc
+*.log
 __pycache__/
